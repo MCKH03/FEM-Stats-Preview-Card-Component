@@ -28,12 +28,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](../Screenshot.png)
+![](./Screenshot.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: ((https://mckh03.github.io/FEM-Stats-Preview-Card-Component/)
 
 ## My process
 
@@ -65,3 +65,4 @@ I think I'm gonna build more menus like the one I built in this one because I le
 - Frontend Mentor - [@MCKH03](https://www.frontendmentor.io/profile/MCKH03)
 - Twitter - [@ytmehrshad](https://twitter.com/ytmehrshad)
 - GitHub - (https://github.com/MCKH03)
+- LinkedIn - (https://www.linkedin.com/in/mehrshad-khavari-581937276/)
