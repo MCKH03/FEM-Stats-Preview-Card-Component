@@ -1,0 +1,37 @@
+// COLORS
+// BACKGROUND
+$blue-dark-1: hsl(233, 49%, 7%); // Main Background
+$blue-dark-2: hsl(244, 38%, 16%); // Card Background
+$violet: hsl(277, 64%, 61%); // Accent
+
+// TYPOGRAPHY
+$white: hsl(0, 0%, 100%); // Main Heading, Stats
+$gray-1: hsla(0, 0%, 100%, 0.75); // Main Paragraph
+$gray-2: hsla(0, 0%, 100%, 0.6); // Stat Headings
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: 50em) {
+    font-size: 58%;
+  }
+}
+
+body {
+  height: 100vh;
+  background-color: $blue-dark-1;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: 50em) {
+    min-height: 100vh;
+  }
+}

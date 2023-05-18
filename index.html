@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Stats preview card component</title>
+  </head>
+  <body>
+    <div class="menu-box">
+      <input type="checkbox" class="menu-box__checkbox" id="checkbox" />
+
+      <label for="checkbox" class="menu-box__icon">
+        <div class="menu-box__icon--spans">
+          <span class="menu-box__icon--span menu-box__icon--span--1"></span>
+          <span class="menu-box__icon--span menu-box__icon--span--2"></span>
+          <span class="menu-box__icon--span menu-box__icon--span--3"></span>
+        </div>
+      </label>
+      <span class="menu-box__background"></span>
+      <nav class="menu-box__nav">
+        <ul class="menu-box__list">
+          <li class="menu-box__item">
+            <a
+              href="https://twitter.com/ytmehrshad"
+              class="menu-box__option"
+              target="_blank"
+              >My Twitter
+            </a>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              class="menu-box__item--icon"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M245.66,77.66l-29.9,29.9C209.72,177.58,150.67,232,80,232c-14.52,0-26.49-2.3-35.58-6.84-7.33-3.67-10.33-7.6-11.08-8.72a8,8,0,0,1,3.85-11.93c.26-.1,24.24-9.31,39.47-26.84a110.93,110.93,0,0,1-21.88-24.2c-12.4-18.41-26.28-50.39-22-98.18a8,8,0,0,1,13.65-4.92c.35.35,33.28,33.1,73.54,43.72V88a47.87,47.87,0,0,1,14.36-34.3A46.87,46.87,0,0,1,168.1,40a48.66,48.66,0,0,1,41.47,24H240a8,8,0,0,1,5.66,13.66Z"
+              ></path>
+            </svg>
+
+            <span class="menu-box__span menu-box__span"></span>
+          </li>
+          <li class="menu-box__item">
+            <a
+              href="https://github.com/MCKH03"
+              class="menu-box__option"
+              target="_blank"
+              >My GitHub
+            </a>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              class="menu-box__item--icon"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M216,104v8a56.06,56.06,0,0,1-48.44,55.47A39.8,39.8,0,0,1,176,192v40a8,8,0,0,1-8,8H104a8,8,0,0,1-8-8V216H72a40,40,0,0,1-40-40A24,24,0,0,0,8,152a8,8,0,0,1,0-16,40,40,0,0,1,40,40,24,24,0,0,0,24,24H96v-8a39.8,39.8,0,0,1,8.44-24.53A56.06,56.06,0,0,1,56,112v-8a58.14,58.14,0,0,1,7.69-28.32A59.78,59.78,0,0,1,69.07,28,8,8,0,0,1,76,24a59.75,59.75,0,0,1,48,24h24a59.75,59.75,0,0,1,48-24,8,8,0,0,1,6.93,4,59.74,59.74,0,0,1,5.37,47.68A58,58,0,0,1,216,104Z"
+              ></path>
+            </svg>
+
+            <span class="menu-box__span menu-box__span"></span>
+          </li>
+          <li class="menu-box__item">
+            <a
+              href="https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62"
+              class="menu-box__option"
+              target="
+            _blank"
+              >The Challenge
+            </a>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              class="menu-box__item--icon"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M243.33,90.91,114.92,219.31a16,16,0,0,1-22.63,0l-71.62-72a16,16,0,0,1,0-22.61l24-24a16,16,0,0,1,22.57-.06l36.64,35.27.11.11h0l92.73-91.37a16,16,0,0,1,22.58,0l24,23.56A16,16,0,0,1,243.33,90.91Z"
+              ></path>
+            </svg>
+            <span class="menu-box__span menu-box__span"></span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <div class="container">
+        <div class="content">
+          <h1 class="content__header">
+            Get <span class="content__header--span">insights</span> that help
+            your business grow.
+          </h1>
+          <p class="content__paragraph">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div class="content__information">
+            <div class="content__stats">
+              <span class="content__stats--number">10k+</span>
+              <span class="content__stats--name">Companies</span>
+            </div>
+            <div class="content__stats">
+              <span class="content__stats--number">314</span>
+              <span class="content__stats--name">Templates</span>
+            </div>
+            <div class="content__stats">
+              <span class="content__stats--number">12M+</span>
+              <span class="content__stats--name">Queries</span>
+            </div>
+          </div>
+        </div>
+        <figure class="image-box"></figure>
+      </div>
+      <div class="developer-box">
+        <p class="developer-box__text">
+          Coded by
+          <a
+            href="https://github.com/MCKH03"
+            class="developer-box__link developer-box__dev"
+            target=" _blank"
+            >Heisenberg
+            <span class="developer-box__span developer-box__span--1"></span> </a
+          >.
+          <a
+            href="https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62"
+            class="developer-box__link developer-box__challenge"
+            target=" _blank"
+            >Challenge
+
+            <span class="developer-box__span developer-box__span--2"></span
+          ></a>
+          from Front-End Mentor.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

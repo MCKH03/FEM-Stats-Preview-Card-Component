@@ -1,0 +1,256 @@
+@use "index" as *;
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.container {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media only screen and (max-width: 50em) {
+    flex-direction: column;
+    width: 80%;
+    padding-top: 6rem;
+  }
+}
+
+.content {
+  flex: 0 0 50%;
+  background-color: $blue-dark-2;
+  padding: 6.5rem;
+  height: 44rem;
+
+  @media only screen and (max-width: 50em) {
+    width: 100%;
+    flex: 1;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5rem;
+  }
+
+  &__information {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 50em) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+.image-box {
+  flex: 0 0 50%;
+  background-image: linear-gradient(
+      to right,
+      rgba($violet, 0.5),
+      rgba($violet, 0.5)
+    ),
+    url(../images/image-header-desktop.jpg);
+  background-size: cover;
+  height: 44rem;
+
+  @media only screen and (max-width: 50em) {
+    order: -1;
+    background-image: linear-gradient(
+        to right,
+        rgba($violet, 0.5),
+        rgba($violet, 0.5)
+      ),
+      url(../images/image-header-mobile.jpg);
+
+    padding-bottom: 28rem;
+    width: 100%;
+    // border-radius: 12px;
+    // height: 28rem;
+
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+}
+
+.menu-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 100000;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__icon {
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    height: 6rem;
+    width: 6rem;
+    background-color: $white;
+    border-radius: 50%;
+    z-index: 1000000;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__icon--spans {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.1s;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__icon--span {
+    height: 0.5rem;
+    width: 3rem;
+    background-color: black;
+    border-radius: 50px;
+    // transform-origin: left center;
+    transition: all 0.1s;
+  }
+
+  &__background {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-image: radial-gradient(red, blue);
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 998;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: all 0.3s;
+  }
+
+  &__icon:hover &__icon--spans {
+    gap: 0.6rem;
+  }
+
+  &__checkbox:checked + &__icon &__icon--spans &__icon--span--2 {
+    opacity: 0;
+  }
+
+  &__checkbox:checked + &__icon &__icon--spans &__icon--span--1 {
+    transform: rotate(45deg) translate(0.4rem, 0.4rem);
+  }
+
+  &__checkbox:checked + &__icon &__icon--spans &__icon--span--3 {
+    transform: rotate(-45deg) translate(0.3rem, -0.3rem);
+  }
+
+  &__checkbox:checked + &__icon &__icon--spans {
+    gap: 0;
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(150);
+    opacity: 1;
+  }
+
+  &__checkbox:checked ~ &__nav {
+    transform: translateX(0);
+    z-index: 10000;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 5rem;
+
+    @media only screen and (max-width: 50em) {
+      align-items: center;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    &--icon {
+      fill: $white;
+      opacity: 0;
+      transition: all 0.3s;
+
+      @media only screen and (max-width: 50em) {
+        opacity: 1;
+        fill: black;
+      }
+    }
+  }
+
+  &__span {
+    width: 0%;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 50px;
+    transition: all 0.3s;
+
+    position: absolute;
+    bottom: -6px;
+    left: 0px;
+  }
+
+  &__item:hover &__item--icon {
+    opacity: 1;
+  }
+
+  &__item:hover &__span {
+    width: 100%;
+  }
+
+  &__option:link,
+  &__option:visited {
+    text-decoration: none;
+    color: $white;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}

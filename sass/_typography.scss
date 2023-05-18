@@ -1,0 +1,109 @@
+@use "index" as *;
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: Inter;
+}
+
+.content {
+  &__header {
+    font-weight: 700;
+    color: $white;
+    line-height: 1.2;
+    margin-bottom: 3.5rem;
+
+    @media only screen and (max-width: 50em) {
+      text-align: center;
+    }
+
+    &--span {
+      color: $violet;
+    }
+  }
+
+  &__paragraph {
+    color: $gray-1;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 6rem;
+
+    @media only screen and (max-width: 50em) {
+      text-align: center;
+    }
+  }
+
+  &__stats--number {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $white;
+  }
+
+  &__stats--name {
+    font-size: 1.6rem;
+    color: $gray-2;
+    font-family: Lexend Deca, sans-serif;
+    font-weight: 400;
+  }
+}
+
+.developer-box {
+  z-index: 100000000;
+  color: $white;
+  text-align: center;
+
+  @media only screen and (max-width: 50em) {
+    padding-bottom: 3rem;
+  }
+
+  &__text {
+    color: currentColor;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  &__dev:link,
+  &__dev:visited {
+    color: #91f9e5;
+    text-decoration: none;
+  }
+
+  &__link {
+    position: relative;
+  }
+
+  &__span {
+    position: absolute;
+    height: 0.5rem;
+    width: 100%;
+    left: -0.1rem;
+    bottom: -1rem;
+    border-radius: 50px;
+    transform: scaleX(0);
+    transition: all 0.5s;
+  }
+
+  &__span--1 {
+    background-color: #91f9e5;
+  }
+
+  &__span--2 {
+    background-color: #758bfd;
+  }
+
+  &__link:hover &__span {
+    transform: scaleX(1);
+  }
+
+  &__challenge:link,
+  &__challenge:visited {
+    color: #758bfd;
+    text-decoration: none;
+  }
+}
+
+/*
+FONTS:
+- Inter: 400, 700
+- Lexend Deca: 400
+*/
