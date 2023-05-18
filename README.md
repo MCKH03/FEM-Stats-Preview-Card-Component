@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/stats-component-card-using-html-css-sass-and-a-little-bit-of-talent-puX56oKHbS)
 - Live Site URL: ((https://mckh03.github.io/FEM-Stats-Preview-Card-Component/)
 
 ## My process
